@@ -1,0 +1,22 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<h1>MyController - index page</h1>
+
+
+@for (int i = 0; i < 10; i++)
+{
+    <h3>Now Count is... @i </h3>
+}
+
+@*<h2> UserName : @Model.UserName </h2>
+    <h2> UserNo : @Model.UserNo </h2>*@
+
+<h2> UserName : @ViewBag.MyUser.UserName </h2>
+    <h2> UserNo : @ViewBag.MyUser.UserNo </h2>
+
+@*<h2> UserName : @ViewData["UserName"] </h2>
+<h2> UserNo : @ViewData["UserNo"] </h2>*@
