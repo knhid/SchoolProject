@@ -10,6 +10,8 @@
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.2.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="2.2.1" />
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="2.1.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.2.1" />
     <PackageReference Include="NuGet.CommandLine" Version="4.9.2" />
@@ -18,8 +20,27 @@
   <ItemGroup>
     <Folder Include="UserControl\" />
     <Folder Include="Views\My\" />
-    <Folder Include="Views\Login\" />
+    <Folder Include="Views\Account\" />
     <Folder Include="Views\Board\" />
-    <Folder Include="DataContext\" />
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="DataContext\NoteDBContext.cs" />
+    <Compile Remove="UserControl\Account.cs" />
+    <Compile Remove="Views\Login\SignIn.cs" />
+    <Compile Remove="Migrations\20190115045956_InitialCreate.cs" />
+    <Compile Remove="Migrations\20190115045956_InitialCreate.Designer.cs" />
+    <Compile Remove="Migrations\UserAccountModelSnapshot.cs" />
+    <Compile Remove="Migrations\UserAccountMigrations\20190116211820_InitialCreate.cs" />
+    <Compile Remove="Migrations\UserAccountMigrations\20190116211820_InitialCreate.Designer.cs" />
+    <Compile Remove="Migrations\20190116211914_InitialCreate.cs" />
+    <Compile Remove="Migrations\20190116211914_InitialCreate.Designer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="Views\Login\Join.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="accounts.db" />
+    <None Remove="accounts.db" />
   </ItemGroup>
 </Project>

@@ -16,7 +16,9 @@ namespace LoginAndBoard.DataContext
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             //base.OnConfiguring(optionsBuilder);
-            optionsBuilder.UseMySql(@"Server=localhost;Database=myNoteDB;Uid=root;Pwd=rootroot;");
+
+            //optionsBuilder.UseMySql(@"Server=localhost;Database=myNoteDB;Uid=root;Pwd=rootroot;");
+
             //optionsBuilder.UseMySql(@"Driver={MySQL ODBC 5.1 Driver};Server=localhost;Database=myNoteDB;
                                     //User=root;Password=rootroot;Option=3;");
         }

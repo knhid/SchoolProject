@@ -32,7 +32,14 @@ namespace LoginAndBoard.Models
         /// </summary>
         /// <value>The user password.</value>
         [Required]
-        public string UserPassword { get; set; }
+        public string UserPW { get; set; }
 
+
+        /// <summary>
+        /// User Email
+        /// </summary>
+        /// <value>The user email.</value>
+        [Required]
+        public string UserEmail { get; set; }
     }
 }
