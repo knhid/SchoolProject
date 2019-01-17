@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace LoginAndBoard.Controllers
 {
-    public class LoginController : Controller
+    public class AccountController : Controller
     {
         // GET: /<controller>/
         public IActionResult Index()
@@ -72,6 +72,7 @@ namespace LoginAndBoard.Controllers
             return View();
         }
 
+        [HttpGet]
         public IActionResult Login()
         {
             Console.WriteLine("TTTTTTTTTTTTTTTTTTTt");
@@ -81,6 +82,7 @@ namespace LoginAndBoard.Controllers
         [HttpPost]
         public IActionResult Login(User lmodel)
         {
+            Console.WriteLine("--------- {0}, {1}", lmodel.UserID, lmodel.UserPW);
             if(ModelState.IsValid)
             {
                 using (var db = new UserAccount())

@@ -9,14 +9,14 @@ namespace LoginAndBoard.Models
         /// Primarykey
         /// </summary>
         /// <value>The user no.</value>
-        [Key] //Primary Key
+        //[Key] //Primary Key
         public int UserNo { get; set; }
 
         /// <summary>
         /// User Name
         /// </summary>
         /// <value>The name of the user.</value>
-        [Required]
+        //[Required]
         public string UserName { get; set; }
 
         /// <summary>
@@ -39,7 +39,7 @@ namespace LoginAndBoard.Models
         /// User Email
         /// </summary>
         /// <value>The user email.</value>
-        [Required]
+        //[Required]
         public string UserEmail { get; set; }
     }
 }
