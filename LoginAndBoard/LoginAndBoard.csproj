@@ -36,6 +36,7 @@
     <Compile Remove="Migrations\20190116211914_InitialCreate.cs" />
     <Compile Remove="Migrations\20190116211914_InitialCreate.Designer.cs" />
     <Compile Remove="Views\Account\SignIn.cs" />
+    <Compile Remove="Migrations\20190116223258_UserAccMigration.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="Views\Login\Join.cshtml" />

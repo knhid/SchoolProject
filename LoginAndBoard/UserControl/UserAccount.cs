@@ -13,6 +13,7 @@ namespace LoginAndBoard.UserControl
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlite("Data Source=accounts.db");
+
         }
     }
 
@@ -26,6 +27,10 @@ namespace LoginAndBoard.UserControl
 
         [Required]
         public string UserPW { get; set; }
+
+        public string UserEmail { get; set; }
+
+        public string UserName { get; set; }
 
         //public ICollection<Join> Users { get; set; }
     }

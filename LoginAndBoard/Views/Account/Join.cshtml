@@ -3,4 +3,33 @@
 *@
 @{
 }
+
+@model LoginAndBoard.Models.User
+
 <h1>Join page</h1>
+<form class="form-horizental" method="post" asp-controller="Account" asp-action="Join">
+    <div class="form-group">
+        <label>User ID</label>
+        <input asp-for="UserID" type="text" class="form-control" placeholder="input user id" />
+    </div>
+
+    <div class="form-group">
+        <label>User Password</label>
+        <input asp-for="UserPW" type="text" class="form-control" placeholder="input password" />
+    </div>
+
+    <div class="form-group">
+        <label>User Email</label>
+        <input asp-for="UserEmail" type="email" class="form-control" placeholder="input user's email" />
+    </div>
+
+    <div class="form-group">
+        <label>User name</label>
+        <input asp-for="UserName" type="text" class="form-control" placeholder="input user's name" />
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Join</button>
+        <a class="btn btn-warning" href="#">cancel</a>
+    </div>
+</form>
