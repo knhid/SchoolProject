@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using LoginAndBoard.Models;
 using LoginAndBoard.UserControl;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -122,7 +123,7 @@ namespace LoginAndBoard.Controllers
         [HttpGet]
         public IActionResult Login()
         {
-            Console.WriteLine("TTTTTTTTTTTTTTTTTTTt");
+            Console.WriteLine("Login");
             return View();
         }
 
@@ -143,12 +144,27 @@ namespace LoginAndBoard.Controllers
                     }
                     else
                     {
-                        Console.WriteLine("Success to loging");
-                        return RedirectToAction("Csharp", "My");
+                        Console.WriteLine("Success to loging [{0}]", usr.UserID);
+                        //Response.Redirect("https://sites.google.com/view/10-28-sun-leeanncake/home");
+
+
+                        HttpContext.Session.SetInt32("USER_STUDENT_KEY", usr.UserNo);
+
+                        return RedirectToAction("Java", "My");
                     }
                 }
             }
+            var gIn = HttpContext.Session.GetInt32("USER_STUDENT_KEY");
+            Console.WriteLine("CHECK -> " + gIn);
             return View();
+        }
+
+
+        public IActionResult LogOut()
+        {
+
+            HttpContext.Session.Remove("USER_STUDENT_KEY");
+            return RedirectToAction("Index", "Home");
         }
     }
 }

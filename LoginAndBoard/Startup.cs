@@ -33,6 +33,12 @@ namespace LoginAndBoard
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            /* 
+             * session added in service for control user's login session           
+             * by.Nam           
+             */
+            services.AddSession();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -52,6 +58,12 @@ namespace LoginAndBoard
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
+
+            /*
+             * for use seesion this app.
+             * by.Nam            
+             */
+            app.UseSession();
 
             app.UseMvc(routes =>
             {

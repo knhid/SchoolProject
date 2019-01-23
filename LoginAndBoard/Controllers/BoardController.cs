@@ -13,6 +13,9 @@ namespace LoginAndBoard.Controllers
         // GET: /<controller>/
         public IActionResult Index()
         {
+            //trying to link page. so far, It still can not load https page.
+            //Response.Redirect("https://sites.google.com/view/10-28-sun-leeanncake/home");
+            Response.Redirect("https://tesla.com");
             return View();
         }
 

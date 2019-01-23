@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using LoginAndBoard.Models;
+using Microsoft.AspNetCore.Http;
 
 namespace LoginAndBoard.Controllers
 {
@@ -12,7 +13,13 @@ namespace LoginAndBoard.Controllers
     {
         public IActionResult Index()
         {
-            return RedirectToAction("Login", "Account");
+            Console.WriteLine("before login check -> " + HttpContext.Session.GetInt32("USER_STUDENT_KEY"));
+            var gIn = HttpContext.Session.GetInt32("USER_STUDENT_KEY");
+            if (HttpContext.Session.GetInt32("USER_STUDENT_KEY") == null) return RedirectToAction("Login", "Account");
+            else return RedirectToAction("Java", "My");
+
+
+
             //return View();
         }
 
