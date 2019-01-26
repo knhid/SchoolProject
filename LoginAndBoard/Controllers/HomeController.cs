@@ -18,8 +18,6 @@ namespace LoginAndBoard.Controllers
             if (HttpContext.Session.GetInt32("USER_STUDENT_KEY") == null) return RedirectToAction("Login", "Account");
             else return RedirectToAction("Java", "My");
 
-
-
             //return View();
         }
 

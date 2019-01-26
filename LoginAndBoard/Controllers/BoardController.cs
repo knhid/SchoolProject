@@ -15,7 +15,7 @@ namespace LoginAndBoard.Controllers
         {
             //trying to link page. so far, It still can not load https page.
             //Response.Redirect("https://sites.google.com/view/10-28-sun-leeanncake/home");
-            Response.Redirect("https://tesla.com");
+            Response.Redirect("https://www.pexels.com/search/north%20carolina/");
             return View();
         }
 

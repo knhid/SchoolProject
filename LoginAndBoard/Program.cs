@@ -23,7 +23,7 @@ namespace LoginAndBoard
             .UseContentRoot(Directory.GetCurrentDirectory())
             .UseIISIntegration()
             .UseStartup<Startup>()
-            .UseUrls("http://localhost:16000");
+            .UseUrls("http://localhost:16000");//, "https://localhost:16001");
 
                 
     }
